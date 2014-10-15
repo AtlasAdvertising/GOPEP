@@ -1,0 +1,64 @@
+/* media center */
+.media-center-wrapper {
+	padding: 0 0 80px;
+	.secondary-content {
+		margin-top: 35px;
+	}
+	.media-title {
+		width: 100%;
+		background: $orange;
+		height: 75px;
+		color: #ffffff;
+		font-family: 'TideSans-500Dudette';
+		font-size: 22px;
+		line-height: 30px;
+		text-transform: uppercase;
+		padding: 25px;
+		@include breakpoint(medium) {
+			font-size: 30px;
+		}
+	}
+	.webpart-title {
+		font-family: 'TideSans-500Dudette';
+		font-size: 20px;
+		color: $black;
+		border-bottom: 4px solid $black;
+		margin-bottom: 20px;
+		padding-bottom: 10px;
+	}
+	ul.news-list {
+		list-style: none;
+		padding: 0;
+		li.news-item {
+			margin-bottom: 25px;
+			.date {
+				@extend %date;
+			}
+			.title {
+				@extend %header;
+				font-size: 25px;
+				line-height: 25px;
+				margin-bottom: 5px;
+			}
+			.description {
+				font-family: Arial, sans-serif;
+				font-size: 13px;
+				color: #222222;
+			}
+		}
+	}
+	.mcSidebarPhotoGallery .flickrGalleryAlbum h3 {
+		font-family: Arial, sans-serif;
+		font-size: 13px;
+		color: #222222;
+		font-weight: bold;
+		margin-top: 5px;
+	}
+}
+
+/* editor mode styles */
+.EditMode {
+	.media-title { 
+		color: $black;
+	}
+}

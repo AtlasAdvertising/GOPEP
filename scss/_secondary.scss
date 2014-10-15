@@ -1,0 +1,275 @@
+/* secondary */
+#secondaryWrapper {
+	padding-top: 0 !important;
+	@include breakpoint(medium) {
+		top: -37px;
+		position: relative;
+	}
+	#secondaryHeaderImage {
+		position: relative;
+		img {
+			@media (max-width: 400px) {
+				min-height: 125px;
+				min-width: 480px;
+				left: -20%;
+				position: relative;
+			}
+		}
+		.SectionHeaderRepeater {
+			position: absolute;
+			bottom: -1px;
+			background: rgba(254,254,254,0.9);
+			padding: 10px;
+			font-family: 'TideSans-500Dudette';
+			font-size: 20px;
+			color: $black;
+			text-transform: uppercase;
+			@include breakpoint(small) {
+				font-size: 30px;
+				padding: 25px;
+			}
+		}
+	}
+	
+	#secondaryContent {
+		margin-top: 25px;
+		@include breakpoint(small) {
+			margin-top: 0;
+		}
+		#sideNavigation {
+			ul#menuElem {
+				font-family: Arial, sans-serif;
+				border-right: 1px solid #E7E3E0;
+				padding-bottom: 100px;
+				li {
+					a {
+						font-weight: bold;
+						font-size: 12px;
+						padding: 5px 20px 5px 0px;
+					}
+				}
+				li.HighLighted {
+					> a {
+						color: $orange;
+					}
+				}
+				img {
+					display: none;
+				}
+				ul {
+					padding: 0 0 0 10px;
+					a {
+						font-weight: normal;
+					}
+				}
+			}
+		}
+		#secondaryMainContent {
+			font-family: Arial, sans-serif;
+			font-size: 13px;
+			color: #222222;
+			h1 {
+				@extend %header;
+				font-size: 30px;
+				margin-top: 5px;
+			}
+			h2 {
+				@extend %header;
+				font-size: 27px;
+			}
+			h3 {
+				@extend %header;
+				font-size: 25px;
+			}
+			h4 {
+				@extend %header;
+				font-size: 18px;
+			}
+		}
+		#sideWidgets {
+			.widget-block {
+				.widget-title {
+					font-family: 'TideSans-500Dudette';
+					font-size: 20px;
+					color: $black;
+					border-top: 4px solid $black;
+					padding-top: 5px;
+					a {
+						display: block;
+						font-family: Arial, sans-serif;
+						font-size: 14px;
+						color: $text-orange;
+						&:hover {
+							color: $button-red;
+							text-decoration: none;
+						}
+					}
+				}
+				h2 {
+					font-family: 'TideSans-500Dudette';
+					font-size: 22px;
+					color: $black;
+					border-top: 4px solid $black;
+					padding-top: 10px;
+				}
+				.widget-block-content {
+					ul.LinksList {
+						li {
+							&:before {
+								content: "\f0da";
+								font-family: FontAwesome;
+								color: $text-orange;
+								padding-right: 5px;
+							}
+							a {
+								font-family: 'TideSans-500Dudette';
+								color: $text-orange;
+								font-size: 12px;
+								&:hover {
+									color: $button-red;
+									text-decoration: none;
+								}
+							}
+						}
+					}
+				}
+				.ConnectWithUs {
+					.Staff {
+						font-family: Arial, sans-serif;
+						.Controls {
+							.button {
+								background: $text-orange;
+							}
+						}
+						.FirstName,
+						.LastName {
+							font-size: 18px;
+							font-weight: bold;
+							color: $text-grey;
+							display: inline;
+						}
+						.LastName {
+							
+						}
+						.Title {
+							font-size: 11px;
+							color: #737373;
+						}
+					}
+				}
+			}
+			#Sidebar_Downloads {
+				.SidebarTitle {
+					font-family:'Avenir LT W01 95 Black';
+					font-size: 22px;
+					color: $black;
+					border-top: 4px solid $black;
+					padding-top: 10px;
+				}
+				.SidebarText {
+					display: none;
+				}
+				.SidebarList {
+					ul {
+						li {
+							.SidebarListMyFavorites {
+								position: relative;
+								top: -7px;
+								cursor: pointer;
+							}
+							a {
+								font-family: Arial, sans-serif;
+								font-size: 11px;
+								color: #333333;
+								&:hover {
+									color: $button-red;
+									text-decoration: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Page utility */
+#pageUtility {
+	.breadCrumbs {
+		a.breadcrumbHome {
+			color: $orange;
+			font-size: 18px;
+			margin-top: 13px;
+			&:hover {
+				color: $button-red;
+			}
+		}
+	}
+	.PageUtility { 
+		z-index: 1;
+		.PageUtility_Wrapper { 
+			width: 320px; 
+			#Utility_MyFavorites, 
+			#Utility_AddPage, 
+			#Utility_Print { 
+				border: 0; 
+				color: #363636; 
+				font-size: 12px; 
+				font-family: Helvetica, Arial, sans-serif; 
+				font-weight: normal; 
+				padding: 0 10px 0 0;
+				&:hover {
+					color: $text-orange;
+					text-decoration: none;
+				} 
+			}
+			#Utility_MyFavorites:after, 
+			#Utility_AddPage:after, 
+			#Utility_Print:after { 
+				content: ': :'; 
+				padding-left: 7px; 
+			}
+			.addthis_button { 
+				font-weight: normal; 
+				&:hover {
+					color: $text-orange;
+					text-decoration: none;
+				}
+			}
+			#Utility_Share { 
+				padding: 0; 
+			}
+			.ImgBg { 
+				display: none; 
+			}
+		}
+		.PageUtility_Dropdown { 
+			-webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.64); 
+			-moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.64); 
+			box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.64); 
+		}
+	}
+}
+
+/* Style for pages with no secondary header image */
+#secondaryWrapper {
+	#secondaryHeaderImage.no-image { 
+		width: 100%;
+		background: $orange;
+		height: 75px;
+		margin: 0;
+		@include breakpoint(medium) {
+			margin-top: 37px;			
+		}
+		.SectionHeaderRepeater.no-image {
+			color: #ffffff;
+			background: none;
+			position: relative;
+			line-height: 55px;
+			@include breakpoint(small) {
+				line-height: 25px;
+			}
+		}
+	}
+}

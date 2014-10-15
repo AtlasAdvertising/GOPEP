@@ -1,0 +1,491 @@
+/* master */
+
+form {
+	-webkit-transform: translateZ(0);
+}
+
+a {
+	color: $orange;
+	&:hover {
+		color: $button-red;
+		text-decoration: none;
+	}
+}
+
+body {
+	.MobileMenu {
+		.MobileMenuPlaceholder {
+			display: none;
+		}
+		.MobileMenuButton {
+			top: 15px; 
+			right: 5px;
+			background: none; 
+			font-size: 36px; 
+			height: auto; 
+			width: auto; 
+			padding: 5px 10px; 
+			color: #094fa3;
+			&:before {
+				content: "\f0c9";
+				font-family: "FontAwesome";
+				color: $orange;
+				font-size: 28px;
+			}
+			@include breakpoint(small) {
+				top: 25px; 
+				right: 50px;
+			}
+			@include breakpoint(medium) {
+				display: none;
+			}
+		}
+	}
+	.MobileMenuWrapper {
+		#searchbtn-mobile {
+			height: 28px;
+		}
+		.mobile-list {
+			margin: 0; 
+			padding: 10px 0 0 0; 
+			list-style: none; 
+			border-top: 1px solid rgba(0,0,0,0.25);
+			li {
+				display: inline-block; 
+				padding: 5px;
+				a {
+					padding: 5px;
+				}
+			}
+		}
+	}
+	header {
+		padding: 0;
+		#logo {
+			position: relative;
+			z-index: 6;
+			padding: 10px 15px;
+			&:hover {
+				opacity:0.5;
+			}
+			@include breakpoint(small) {
+				margin: 10px 0;
+				padding: 10px 0 0;
+			}
+			@include breakpoint(medium) {
+				&:after { 
+					content: url('/GOPEP/images/site-logo-bottom.png');
+					position: absolute;
+					cursor: pointer;
+				}
+			}
+			img#p_lt_wpzLogo_LogoMobile_imgImage {
+				display: block !important;
+				max-width: 200px;
+				@include breakpoint(small) {
+					max-width: 250px;
+				}
+				@include breakpoint(medium) {
+					display: none !important;
+				}
+			}
+			img#p_lt_wpzLogo_LogoDesktop_imgImage {
+				display: none !important;
+				@include breakpoint(medium) {
+					display: block !important;
+				}
+			}
+		}
+		.searchBox {
+			right: -175px;
+			position: absolute;
+			width: 333px;
+			
+			.SmartSearchTextbox {
+				width: 60%;
+				margin-right: 15%;
+				height: 35px;
+				float: right;
+				background: #EBEBEB;
+				border: none;
+				padding: 0 5px;
+			}
+			.SmartSearchButton {
+				width: 25%;
+				height: 35px;
+				position: static;
+				border: none;
+				outline: none;
+				background: $orange;
+				color: #ffffff;
+				font-family: 'TideSans-300LilKahuna';
+				font-size: 11px;
+				&:hover {
+					background: $button-red;
+					text-decoration: none;
+				}
+			}
+		}
+		.search-close-button {
+			font-family: "FontAwesome";
+			font-size: 22px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			background: $button-red;
+			width: 15%;
+			height: 35px;
+			text-align: center;
+			line-height: 35px;
+			color: #ffffff;
+			cursor: pointer;
+			i {
+				margin-top: 6px;
+			}
+		}
+		.utility-wrapper {
+			overflow: hidden;
+			width: 445px;
+			height: 35px;
+			float: right;
+			position: relative;
+		}
+		.utility-wrapper-lower {
+			clear: both;
+		}
+		ul#utilityNav {
+			position: relative;
+			right: 80px;
+			li:first-child a:before {
+		    content: "\f041";
+			}
+			li:nth-child(2) a:before {
+		    content: "\f09e";
+			}
+			li:nth-child(3) a:before {
+		    content: "\f0e0";
+			}
+		}
+		ul.search-button {
+			position: absolute;
+			right: 0;
+			li a:before {
+		    content: "\f002";
+		    font-family: fontawesome;
+			}
+		}
+		ul.search-button.nav li a:before,
+		ul#utilityNav li a:before {
+	    margin-right: 4px;
+	    font-family: "FontAwesome"
+		}
+		ul#utilityNav,
+		ul.search-button {
+			float: right;
+			li {
+				float: left;
+				a {
+					font-family: 'TideSans-300LilKahuna';
+					font-size: 11px;
+					background: $orange;
+					color: #ffffff;
+					cursor: pointer;
+					&:hover {
+						background: $button-red;
+					}
+				}
+			}
+		}
+		#headerPhoneNum {
+			font-family: 'TideSans-400LilDude';
+			font-size: 17px;
+			font-weight: bold;
+			color: $text-red;
+			margin-top: 20px;
+			span {
+				font-weight: normal;
+				margin-left: 10px;
+			}
+		}
+		#google_translate_element {
+			float: right;
+			margin: 20px 0 0 10px;
+		}
+		img.goog-te-gadget-icon {
+			display: none;
+		}
+		.goog-te-menu-value span{
+			color: $text-red !important;
+			font-family: 'TideSans-400LilDude';
+			font-size: 13px;
+		}
+		.goog-te-menu-value span:hover{
+			text-decoration: none;
+		}
+		.goog-te-gadget-simple{
+			background-color: transparent !important; 
+			border: 0px !important; 
+			margin-top: 3px;
+		}
+		a.goog-te-menu-value:hover {
+			text-decoration: none !important;
+		}
+	}
+	nav {
+		background: rgba(0,0,0,0.7);
+		position: relative;
+		z-index: 5;
+		font-family: 'TideSans-200LilMondo';
+		font-size: 12px;
+		-webkit-box-shadow: 0px -3px 4px 0px rgba(0,0,0,0.36);
+		-moz-box-shadow: 0px -3px 4px 0px rgba(0,0,0,0.36);
+		box-shadow: 0px -3px 4px 0px rgba(0,0,0,0.36);
+		#menuElem {
+			margin: 0 0 0 90px;
+			@include breakpoint(large) {
+				margin: 0 0 0 110px;
+			}
+			li { 
+				a {
+					color: #ffffff;
+					padding: 10px 12px;
+					@include breakpoint(large) {
+						padding: 10px 20px;
+					}
+					&:hover {
+						background: #DA3B31;
+					}
+				}
+				ul {
+					background: rgba(0,0,0,0.9);
+					text-align: center;
+					li {
+						border: none;
+						a {
+							&:hover {
+								background: #DA3B31;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	footer {
+		top: -37px;
+		position: relative;
+		-webkit-box-shadow: 0px -3px 4px 0px rgba(0, 0, 0, 0.36);
+		-moz-box-shadow: 0px -3px 4px 0px rgba(0, 0, 0, 0.36);
+		box-shadow: 0px -3px 4px 0px rgba(0, 0, 0, 0.36);
+		padding-top: 37px;
+		@include breakpoint(medium) {
+			padding-top: 0;
+		}
+		#footer-top {
+			#footerContent {
+				#footerOffice {
+					margin-bottom: 20px;
+					@include breakpoint(medium) {
+						margin-bottom: 0;
+					}
+				}
+				.OfficeName {
+					font-family: 'TideSans-500Dudette';
+					font-size: 20px;
+					font-weight: normal;
+					color: $black;
+					line-height: 26px;
+					margin-bottom: 20px;
+				}
+				.OfficeAddress,
+				.OfficePhone,
+				.OfficeEmail {
+					float: left;
+					line-height: 25px;
+					clear: left;
+					@include breakpoint(small) {
+						clear: none;
+					}
+				}
+				.OfficeAddress,
+				.OfficePhone {
+					margin-right: 15px;
+				}				
+				.OfficeAddress {
+					font-family: 'TideSans-300LilKahuna';
+					font-size: 13px;
+					&:before {
+						content: "\f041";
+						font-family: FontAwesome;
+						font-size: 20px;
+						color: $text-orange;
+						position: relative;
+						top: 2px;
+						margin-right: 5px;
+					}
+				}
+				.OfficePhone {
+					font-family: 'TideSans-300LilKahuna';
+					font-size: 13px;
+					font-weight: normal;
+					&:before {
+						content: "\f095";
+						font-family: FontAwesome;
+						font-size: 18px;
+						color: $text-orange;
+						position: relative;
+						top: 4px;
+						margin-right: 5px;
+					}
+				}
+				.OfficeEmail {
+					font-family:'Avenir LT W01 95 Black';
+					font-size: 13px;
+					font-weight: normal;
+					color: $text-orange;
+					&:hover {
+						color: $button-red;
+						text-decoration: none;
+					}
+					&:before {
+						content: "\f0e0";
+						font-family: FontAwesome;
+						font-size: 16px;
+						margin-right: 5px;
+					}
+				}
+				#signupForm {
+					.footer-header {
+						font-family: 'TideSans-500Dudette';
+						color: $black;
+						font-size: 16px;
+						margin-bottom: 10px;
+						font-weight: bold;
+						@include breakpoint(small) {
+							margin-bottom: 20px;
+						}
+					}
+					input#email {
+						@extend %input;
+						width: 100%;
+						float: left;
+						margin-bottom: 10px;
+						@include breakpoint(small) {
+							width: 65%;
+							float: none;
+							margin-bottom: 0;
+						}
+					}
+					input#emailBtn {
+						@include button(#ffffff,$orange,$button-red);
+						border: none;
+						padding: 8px 25px;
+						clear: left;
+						float: left;
+						line-height: 16px;
+						@include breakpoint(small) {
+							clear: none;
+							float: none;
+							width: 32%;
+							padding: 8px 0;
+						}
+						@include breakpoint(large) {
+							padding: 8px 20px;
+						}
+					}
+				}
+				span#copyright {
+					font-family: 'TideSans-500Dudette';
+					font-size: 14px;
+					color: $black;
+					text-align: left;
+					width: 100%;
+					display: block;
+					margin-top: 25px;
+					line-height: 16px;
+					@include breakpoint(small) {
+						font-family: 'TideSans-300LilKahuna';
+						color: $orange;
+						margin-top: 15px;
+						text-align: center;
+					}
+				}
+				span#footerButton {
+					clear: both;
+					display: block;
+					padding-top: 20px;
+					position: relative;
+					text-align: center;
+					cursor: pointer;
+					color: #000000;
+					font-family:'Avenir LT W01 95 Black';
+					font-size: 14px;
+					&:before {
+						content: "";
+						border-top: 1px solid #2B5494;
+						position: absolute;
+						left: 15px;
+						top: 29px;
+						width: 44%;
+					}
+					&:after {
+						content: "";
+						border-top: 1px solid #2B5494;
+						position: absolute;
+						right: 15px;
+						top: 29px;
+						width: 44%;
+					}
+				}
+			}
+		}
+	}
+	#footer-bottom {
+		display: none;
+		#siteMap {
+			> .CMSSiteMapList {
+				> .CMSSiteMapListItem {
+					width: 12%;
+					margin: 0 2% 0 0;
+					a {
+						color: $text-orange;
+						&:hover {
+							color: $button-red; 
+							text-decoration: none;
+						}
+					}
+					.CMSSiteMapList {
+						.CMSSiteMapListItem {
+							padding: 10px 0 0 0;
+							a {
+								color: $dark-grey;
+								&:hover {
+									color: $button-red;
+								}
+							}
+						}
+					}
+				}
+			}
+			#footerButtonClose {
+				background: $orange; 
+				color: #fff; 
+				padding: 8px 14px; 
+				border-radius: 50%; 
+				float: right;
+				&:hover {
+					background: $button-red;
+				}
+			}
+		}
+	}
+}
+
+/* Editor Mode Styles */
+.EditMode header .searchBox {
+	right: 0;
+}
+
+.EditMode header .utility-wrapper {
+	height: 120px;
+}

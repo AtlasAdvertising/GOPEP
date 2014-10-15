@@ -1,0 +1,74 @@
+/* MIXINS */
+@mixin yellow-button {
+	padding: 10px 25px;
+	background: #FFA706;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-family: 'TideSans-500Dudette';
+	&:hover {
+		background: $button-red;
+		text-decoration: none;
+	}
+}
+
+@mixin button($text,$color,$hover) {
+	padding: 10px 25px;
+	background: $color;
+	color: $text;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-family: 'TideSans-500Dudette';
+	&:hover {
+		background: $hover;
+		text-decoration: none;
+	}	
+}
+
+
+/* Placeholders */
+%header {
+	font-family: 'TideSans-500Dudette';
+	color: #333333;
+}
+
+%date {
+	font-family: 'TideSans-300LilKahunaItalic';
+	color: #333;
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+%input {
+	background: #EBEBEB;
+	border: none;
+	outline: 0;
+	padding: 6px 5px;
+}
+
+
+/* Breakpoint Mixins */
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: 992px) { @content; }
+  }
+  @else if $point == large {
+    @media (min-width: 1200px) { @content; }
+  }
+}
+
+
+/* linked stylesheets */
+
+@import 'fonts';
+@import 'colors';
+@import 'master';
+@import 'home';
+@import 'secondary';
+@import 'media';
+@import 'contact';
+@import 'success';
+@import 'news';
+@import 'search';

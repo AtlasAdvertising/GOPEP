@@ -1,0 +1,36 @@
+/* Search Page */
+
+.SearchDialog {
+	margin-top: 75px;
+	td { 
+		padding: 5px 5px; 
+		label {
+			font-size: 16px;
+			font-family: 'TideSans-500Dudette';
+			margin-right: 10px;
+		}
+		input {
+			outline: 0;
+		}
+		input#p_lt_wpzPagePlaceholder_pageplaceholder_pageplaceholder_lt_wpzSearchResults_SearchDialogWithResults_srchDialog_txtSearchFor {
+			@extend %input;
+		}
+		select#p_lt_wpzPagePlaceholder_pageplaceholder_pageplaceholder_lt_wpzSearchResults_SearchDialogWithResults_srchDialog_drpSearchMode { 
+			width: 100%;
+			cursor: pointer;
+			@extend %input;
+		}
+		input#p_lt_wpzPagePlaceholder_pageplaceholder_pageplaceholder_lt_wpzSearchResults_SearchDialogWithResults_srchDialog_btnSearch { 
+			width: 100%; 
+			margin: 0; 
+			position: relative; 
+			display: inline-block; 
+			outline: 0; 
+			border: 0;
+			@include button(#ffffff,$orange,$button-red);
+		}
+	}
+}
+.SearchResults {
+	margin-top: 25px;
+}
