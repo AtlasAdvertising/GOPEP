@@ -5,6 +5,6 @@ Sass and css for GOPEP
 
 Site URLs
 ---------
-Prod: prod.gopep.atlas-advertising.com
+Prod: http://prod.gopep.atlas-advertising.com
 
-Dev: dev.gopep.atlas-advertising.com
+Dev: http://dev.gopep.atlas-advertising.com
