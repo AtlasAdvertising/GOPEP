@@ -1,0 +1,24 @@
+/* CALENDAR */
+
+.Calendar {padding: 20px 15px;}
+.Calendar table {width: 100%;}
+.Calendar table tbody > tr td {}
+.Calendar table tbody > tr:first-child td {color: #fff; font-weight: bold;}
+.Calendar .Navigation, .Center{padding:10px 10px;}
+.Calendar .Title{background: $orange; min-height:20px; font-size:16px !important; line-height:16px !important; padding:0px; margin:0px;}
+.Calendar .OtherMonth{background:#eee; color:#aaa; padding:10px;}
+.Calendar .Title td{border:0px !important;}
+.Calendar .EventCalendar td{border:1px solid #d1d0cc;}
+.Calendar .EventCalendar td .Content {min-height: 50px;}
+.Calendar .EventCalendar td a {color: $orange; font-weight: bold; display:block; line-height: 1.2; font-size: 14px;}
+.Calendar .EventCalendar .Today{background:$orange; color: #fff; padding:10px;}
+.Calendar .EventCalendar .Today a {color: #fff;}
+.Calendar .Day{padding:10px;}
+.Calendar .DayHeader{color:#002b58; padding-top:15px; font-size:16px; text-align: center;}
+.Calendar .Navigation img {display: none;}
+.Calendar .Navigation a {display: inline-block; background: #4C4C4C; height: 30px; width: 30px; position: relative; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;}
+.Calendar .Navigation:first-child a:before {content: ""; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-right: 15px solid #fff; position: absolute; top: 5px; left: 6px;}
+.Calendar .Navigation:last-child a:before {content: ""; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 15px solid #fff; position: absolute; top: 5px; left: 7px;}
+.EventDetail {padding: 20px 15px 75px;}
+.EventDetail table {width: 100%;}
+.EventDetail table td {padding: 0 0 10px 0;}
